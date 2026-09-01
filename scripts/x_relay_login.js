@@ -88,6 +88,6 @@ async function main() {
   const finalText = await text(page);
   const screenshot = await shot(page, state);
   console.log(JSON.stringify({ ok: state === 'logged_in', state, url: page.url(), screenshot, text_hint: clean(finalText, c) }, null, 2));
-  await browser.close();
+  // Keep shared relay browser alive for subsequent actions.
 }
 main().catch(e => { console.error(JSON.stringify({ ok:false, error:e.message }, null, 2)); process.exit(1); });

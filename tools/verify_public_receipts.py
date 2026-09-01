@@ -19,9 +19,11 @@ def scan(obj, path="$"):
     problems=[]
     if isinstance(obj, dict):
         for k,v in obj.items():
-            if SECRET_KEYS.search(str(k)):
-                problems.append(f"secret-like key {path}.{k}")
-            problems.extend(scan(v, f"{path}.{k}"))
+            child_path = f"{path}.{k}"
+            # Safe boolean disclosure field used by public receipts.
+            if str(k) != "secret_material_recorded" and SECRET_KEYS.search(str(k)):
+                problems.append(f"secret-like key {child_path}")
+            problems.extend(scan(v, child_path))
     elif isinstance(obj, list):
         for i,v in enumerate(obj): problems.extend(scan(v, f"{path}[{i}]"))
     elif isinstance(obj, str):
