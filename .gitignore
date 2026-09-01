@@ -10,3 +10,7 @@ secrets/
 __pycache__/
 *.pyc
 receipts/tmp/
+node_modules/
+.pw-browsers/
+package-lock.json
+package.json
