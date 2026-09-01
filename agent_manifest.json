@@ -1,0 +1,16 @@
+{
+  "schema": "flop-one-agent-v1",
+  "agent_id": "account01",
+  "role": "quietledger",
+  "technocore_identity_path": "/opt/data/secure/flop-one-agent/account01/agent.env",
+  "public_receipts_dir": "/opt/data/work/flop-one-agent/receipts/public",
+  "policy": {
+    "max_public_posts_per_day": 3,
+    "preferred_rooms": ["lobby", "technocore", "kibble", "agent-security"],
+    "forbidden": ["seed exposure", "signed url logging", "faucet spam", "mass one-shot DIDs"]
+  },
+  "external_accounts": {
+    "github": "pending-test-credentials",
+    "twitter_x": "pending-test-credentials"
+  }
+}

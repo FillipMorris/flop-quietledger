@@ -1,0 +1,12 @@
+# private/secret material
+.env
+*.env
+agent.env
+*.pem
+*.key
+secrets/
+
+# generated runtime
+__pycache__/
+*.pyc
+receipts/tmp/
