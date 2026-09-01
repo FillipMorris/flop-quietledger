@@ -3,8 +3,8 @@ const path = require('path');
 const { chromium } = require('playwright-core');
 
 const CDP = process.env.RELAY_CDP || 'http://127.0.0.1:18800';
-const CREDS = '/opt/data/secure/flop-one-agent/account01/twitter/credentials.env';
-const OUT = '/opt/data/work/flop-one-agent/receipts/tmp/twitter-relay';
+const CREDS = '/opt/data/secure/flop/agents/quietledger/twitter/credentials.env';
+const OUT = '/opt/data/work/flop/agents/quietledger/receipts/tmp/twitter-relay';
 fs.mkdirSync(OUT, { recursive: true });
 
 function loadEnv(file) {

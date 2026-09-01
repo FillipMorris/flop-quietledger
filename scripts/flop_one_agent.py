@@ -13,9 +13,9 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
-ROOT = Path('/opt/data/work/flop-one-agent')
+ROOT = Path('/opt/data/work/flop/agents/quietledger')
 ONBOARD = Path('/opt/data/work/flop-research/danenright_technocore-contributor-onboarding/technocore_onboard.py')
-IDENTITY = Path('/opt/data/secure/flop-one-agent/account01/agent.env')
+IDENTITY = Path('/opt/data/secure/flop/agents/quietledger/agent.env')
 RECEIPTS = ROOT / 'receipts' / 'public'
 
 INTRO_MESSAGE = (

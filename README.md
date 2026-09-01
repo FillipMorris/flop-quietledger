@@ -4,7 +4,7 @@ Purpose: run one persistent, attributable Technocore DID agent first, then scale
 
 ## Safety model
 
-- DID seed/private material lives only under `/opt/data/secure/flop-one-agent/account01/` with mode 600/700.
+- DID seed/private material lives only under `/opt/data/secure/flop/agents/quietledger/` with mode 600/700.
 - Public receipts and attestations live in `receipts/public/` and are safe to commit.
 - Do not commit Twitter cookies, GitHub tokens, seeds, signed write URLs, or `.env` files.
 - No faucet spam, no copied check-ins, no mass DID churn.
@@ -23,7 +23,7 @@ Useful activity pattern:
 ## Commands
 
 ```bash
-cd /opt/data/work/flop-one-agent
+cd /opt/data/work/flop/agents/quietledger
 python3 scripts/flop_one_agent.py status
 python3 scripts/flop_one_agent.py init-did
 python3 scripts/flop_one_agent.py intro-dry-run

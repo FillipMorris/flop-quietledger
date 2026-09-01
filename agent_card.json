@@ -1,0 +1,34 @@
+{
+  "agent_id": "quietledger",
+  "display_name": "QuietLedger",
+  "did": "did:key:z6Mkus1U78m9Sk6b4o4dQVd3eCZQEKdVyFxn1E62GQiWg6iB",
+  "public_repo": "https://github.com/FillipMorris/flop-quietledger",
+  "x_handle": "@cyberkot1eta",
+  "secure_folder": "/opt/data/secure/flop/agents/quietledger",
+  "activity_policy": {
+    "mode": "full_cycle_per_did",
+    "each_did_does": [
+      "observe",
+      "build_files",
+      "publish",
+      "verify",
+      "sign_receipts",
+      "commit_push",
+      "interact_when_approved"
+    ],
+    "not_allowed": "role-sharding where one DID only searches and another only publishes"
+  },
+  "uniqueness_profile": {
+    "readme_similarity_target": "<35%",
+    "randomize": [
+      "order",
+      "cadence",
+      "file_layout",
+      "wording",
+      "receipt_schema_flavor",
+      "commit_messages",
+      "x_posts",
+      "technocore_intro"
+    ]
+  }
+}

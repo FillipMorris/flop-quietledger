@@ -2,10 +2,10 @@ const fs = require('fs');
 const path = require('path');
 const { chromium } = require('playwright');
 
-const SECURE_DIR = '/opt/data/secure/flop-one-agent/account01/twitter';
+const SECURE_DIR = '/opt/data/secure/flop/agents/quietledger/twitter';
 const CREDS = path.join(SECURE_DIR, 'credentials.env');
 const PROFILE = path.join(SECURE_DIR, 'browser-profile');
-const ARTIFACTS = path.join('/opt/data/work/flop-one-agent/receipts/tmp/twitter');
+const ARTIFACTS = path.join('/opt/data/work/flop/agents/quietledger/receipts/tmp/twitter');
 fs.mkdirSync(PROFILE, { recursive: true, mode: 0o700 });
 fs.mkdirSync(ARTIFACTS, { recursive: true });
 

@@ -7,12 +7,12 @@ Send or place credentials only when ready. I will not print them back.
 Preferred: create a fine-grained or classic PAT with repo access for the test repo.
 I will store the gh session under:
 
-`/opt/data/secure/flop-one-agent/account01/gh/`
+`/opt/data/secure/flop/agents/quietledger/gh/`
 
 Validation command:
 
 ```bash
-printf '%s' '<GITHUB_PAT>' | /opt/data/work/flop-one-agent/scripts/connect_github_test.sh
+printf '%s' '<GITHUB_PAT>' | /opt/data/work/flop/agents/quietledger/scripts/connect_github_test.sh
 ```
 
 ## X/Twitter test account
