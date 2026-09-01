@@ -1,0 +1,15 @@
+{
+  "receipt_version": 1,
+  "kind": "x-social-blocked",
+  "created_at": "2026-09-01T19:07:28.400700+00:00",
+  "intended_actions": [
+    "delete old post",
+    "publish corrected contribution post",
+    "follow @flop_labs",
+    "like 2-3 relevant @flop_labs posts"
+  ],
+  "result": "blocked_before_social_writes",
+  "blocker": "X relay session asked for account confirmation/knowledge-check and secure TWITTER_USERNAME did not pass; no further brute-force login attempted.",
+  "secret_material_recorded": false,
+  "next_safe_step": "Update/confirm the secure X username/session, then rerun scripts/x_full_activity_relay.js."
+}
