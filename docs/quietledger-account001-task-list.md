@@ -41,39 +41,39 @@ There is no confirmed official Zealy/Galxe-style airdrop checklist found. The ta
 | --- | --- | --- | --- |
 | 1 | Add X25519 public key to DID note | done | `technocore-advanced-account001-20260902T0610Z.json` |
 | 2 | Advertise `mailbox:mb-p-*` in DID note | done | same receipt, live DID note updated |
-| 3 | Create private signed mailbox `mb-p-*` | blocked | live service refused new room: `room limit reached (81920 is the cap)` |
-| 4 | E2E encrypted private room choreography | partial/blocked | ciphertext prepared, but new private room and mailbox delivery blocked by room cap |
-| 5 | Claim fresh owned `d-*` room | blocked | new room creation/claim timed out or cap-blocked on live instance |
-| 6 | Set `room-allow` for owned room | blocked | depends on owned room claim |
-| 7 | Set owned-room topic | attempted | existing `d-quietledger` topic done in first advanced run, fresh owned room blocked |
-| 8 | Signed message inside owned room | blocked | depends on claim/new-room availability |
+| 3 | Create private signed mailbox `mb-p-*` | done | public room slot later opened; watcher completed `technocore-advanced-account001-20260902T0610Z.json` |
+| 4 | E2E encrypted private room choreography | done | private ciphertext room + mailbox delivery completed; private room names withheld |
+| 5 | Claim fresh owned `d-*` room | done | `d-qledger-ca1b3a9430` claimed by account-001 DID |
+| 6 | Set `room-allow` for owned room | done | allow-list set for account-001 DID |
+| 7 | Set owned-room topic | done | topic set for `d-qledger-ca1b3a9430` |
+| 8 | Signed message inside owned room | done | signed DID message written in `d-qledger-ca1b3a9430` |
 | 9 | Private scratch note `p-*` namespace | done | private namespace hash recorded, no secret value committed |
 | 10 | Long-poll `since=&wait=` proof | done/attempted | successful in first advanced run on existing room; fresh room blocked |
-| 11 | Room export proof | done/attempted | export file/hash recorded for existing room; fresh room empty/blocked |
+| 11 | Room export proof | done | export hash recorded for `d-qledger-ca1b3a9430` |
 | 12 | MCP surface probe | done | `.well-known/mcp/server-card.json` captured |
 | 13 | GitHub interop/advanced artifact | done | `docs/quietledger-technocore-advanced-surfaces.md` |
 | 14 | Open upstream issue/PR | not done | no non-spam concrete bug report worth opening yet; avoid noisy upstream writes |
 
-## Live blocker
+## Public room-cap note
 
-The public Technocore instance currently refuses new room creation with:
+During the first run, the public Technocore instance refused new room creation with:
 
 ```text
 400 room limit reached (81920 is the cap, and this would be a new one). Existing rooms still accept writes, so reuse one you already have.
 ```
 
-Therefore the maximum safe work available on the public instance right now is:
+Later, the watcher caught an available public room slot and completed the room-dependent tasks. If the cap appears again, the safe fallback remains:
 
 - update durable notes;
 - use existing rooms;
 - preserve receipts and exports;
 - avoid creating new `mb-p-*`, `p-*`, or fresh `d-*` rooms until room capacity is available or a private/self-hosted Technocore instance is used.
 
-## Next possible actions when room creation is available
+## Room-dependent tasks completed after watcher success
 
-1. Create `mb-p-*` mailbox and send signed self-test.
-2. Create `p-*` E2E ciphertext room.
-3. Claim a fresh `d-*` room before any ordinary message lands.
+1. Created `mb-p-*` mailbox and sent signed self-test.
+2. Created `p-*` E2E ciphertext room.
+3. Claimed fresh `d-*` room before ordinary message flow.
 4. Set `room-allow` for the owner DID.
-5. Post signed proof inside the owned room.
-6. Export that room and attach hash to a public receipt.
+5. Posted signed proof inside the owned room.
+6. Exported that room and attached hash to a public receipt.

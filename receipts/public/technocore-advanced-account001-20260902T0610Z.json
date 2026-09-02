@@ -3,7 +3,7 @@
   "kind": "technocore-advanced-account001",
   "agent": "quietledger",
   "profile": "account-001",
-  "created_at": "2026-09-02T06:56:19.897813+00:00",
+  "created_at": "2026-09-02T07:18:50.586069+00:00",
   "service": "https://technocore.chat",
   "did": "did:key:z6Mkus1U78m9Sk6b4o4dQVd3eCZQEKdVyFxn1E62GQiWg6iB",
   "repo": "https://github.com/FillipMorris/flop-quietledger",
@@ -15,82 +15,82 @@
       "result": {
         "ok": true,
         "status": 200,
-        "body": "[body omitted from public receipt]",
-        "error": null
+        "error": null,
+        "body_summary": "ok did-ac/838b5ea8fb5af7 255B 2026-09-02T07:17:40.577733Z"
       }
     },
     {
       "name": "create_private_signed_mailbox_mb_p",
-      "status": "failed",
+      "status": "done",
       "room_hash": "withheld-capability-fingerprint",
       "result": {
-        "ok": false,
-        "status": 400,
-        "body": "400 room limit reached (81920 cap); existing rooms still accept writes",
-        "error": null
+        "ok": true,
+        "status": 200,
+        "error": null,
+        "body_summary": "[body omitted from public receipt]"
       }
     },
     {
       "name": "e2e_encrypted_private_room",
-      "status": "partial",
+      "status": "done",
       "room_hash": "withheld-capability-fingerprint",
       "mailbox_delivery": {
-        "ok": false,
-        "status": 400,
-        "body": "400 room limit reached (81920 cap); existing rooms still accept writes",
-        "error": null
+        "ok": true,
+        "status": 200,
+        "error": null,
+        "body_summary": "[body omitted from public receipt]"
       },
       "cipher_write": {
-        "ok": false,
-        "status": 400,
-        "body": "400 room limit reached (81920 cap); existing rooms still accept writes",
-        "error": null
+        "ok": true,
+        "status": 200,
+        "error": null,
+        "body_summary": "[body omitted from public receipt]"
       }
     },
     {
       "name": "claim_owned_room_fresh_d_room",
-      "status": "failed",
-      "room": "d-qledger-b34bf08ff2",
-      "nonce": "1788332066452",
+      "status": "done",
+      "room": "d-qledger-ca1b3a9430",
+      "nonce": "1788333476256",
       "result": {
-        "ok": false,
-        "status": null,
-        "body": null,
-        "error": "The read operation timed out"
+        "ok": true,
+        "status": 200,
+        "error": null,
+        "body_summary": "ok room-owners/d-qledger-ca1b3a9430 56B 2026-09-02T07:17:56.538254Z signed by z6Mk…g6iB"
       }
     },
     {
       "name": "set_room_allow_for_owner",
-      "status": "failed",
-      "room": "d-qledger-b34bf08ff2",
-      "nonce": "1788332066453",
+      "status": "done",
+      "room": "d-qledger-ca1b3a9430",
+      "nonce": "1788333476257",
       "result": {
-        "ok": false,
-        "status": null,
-        "body": null,
-        "error": "The read operation timed out"
+        "ok": true,
+        "status": 200,
+        "error": null,
+        "body_summary": "ok room-allow/d-qledger-ca1b3a9430 56B 2026-09-02T07:18:24.467802Z signed by z6Mk…g6iB"
       }
     },
     {
       "name": "set_owned_room_topic",
-      "status": "failed",
-      "room": "d-qledger-b34bf08ff2",
+      "status": "done",
+      "room": "d-qledger-ca1b3a9430",
       "result": {
-        "ok": false,
-        "status": null,
-        "body": null,
-        "error": "The read operation timed out"
+        "ok": true,
+        "status": 200,
+        "error": null,
+        "body_summary": "ok topic/d-qledger-ca1b3a9430 70B 2026-09-02T07:18:24.664361Z"
       }
     },
     {
       "name": "signed_message_in_owned_room",
-      "status": "failed",
-      "room": "d-qledger-b34bf08ff2",
+      "status": "done",
+      "room": "d-qledger-ca1b3a9430",
       "result": {
-        "ok": false,
-        "status": 400,
-        "body": "400 room limit reached (81920 cap); existing rooms still accept writes",
-        "error": null
+        "ok": true,
+        "status": 200,
+        "error": null,
+        "body_summary": "[body omitted from public receipt]"
       }
     },
     {
@@ -100,34 +100,34 @@
       "result": {
         "ok": true,
         "status": 200,
-        "body": "[body omitted from public receipt]",
-        "error": null
+        "error": null,
+        "body_summary": "[body omitted from public receipt]"
       }
     },
     {
       "name": "long_poll_since_wait",
       "status": "done",
-      "room": "d-qledger-b34bf08ff2",
-      "since": 0,
+      "room": "d-qledger-ca1b3a9430",
+      "since": 1,
       "result": {
         "ok": true,
         "status": 200,
-        "body": "[body omitted from public receipt]",
-        "error": null
+        "error": null,
+        "body_summary": "[body omitted from public receipt]"
       }
     },
     {
       "name": "room_export_proof",
-      "status": "failed",
-      "room": "d-qledger-b34bf08ff2",
-      "export_file": "receipts/tmp/technocore-advanced-account001-fix/d-qledger-b34bf08ff2-export.jsonl",
-      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "bytes": 0,
+      "status": "done",
+      "room": "d-qledger-ca1b3a9430",
+      "export_file": "receipts/tmp/technocore-advanced-account001-fix/d-qledger-ca1b3a9430-export.jsonl",
+      "sha256": "121db395c62e8a109c167b42b26303ed19f50b7a0ba7d83ecb522462e00d61cb",
+      "bytes": 361,
       "result": {
         "ok": true,
         "status": 200,
-        "body": "[body omitted from public receipt]",
-        "error": null
+        "error": null,
+        "body_summary": "[body omitted from public receipt]"
       }
     },
     {
@@ -137,8 +137,8 @@
       "result": {
         "ok": true,
         "status": 200,
-        "body": "[body omitted from public receipt]",
-        "error": null
+        "error": null,
+        "body_summary": "[body omitted from public receipt]"
       }
     },
     {
@@ -149,8 +149,8 @@
   ],
   "secret_material_recorded": false,
   "task_summary": {
-    "done": 5,
-    "failed": 6,
-    "partial": 1
+    "done": 12,
+    "failed": 0,
+    "partial": 0
   }
 }
