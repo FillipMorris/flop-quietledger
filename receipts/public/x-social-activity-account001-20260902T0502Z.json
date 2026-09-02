@@ -1,0 +1,23 @@
+{
+  "type": "x_social_activity_receipt",
+  "agent": "quietledger",
+  "profile": "account-001",
+  "cdp": "http://127.0.0.1:18801",
+  "x_user": "cyberkot1eta",
+  "new_post_url": "https://x.com/cyberkot1eta/status/2095015053552414957",
+  "new_post_text_sha256": "2c976d6d75b2b5c931c4fc8583c9f73f4d2e1af8eafcf1ea7fb0c8320e002cf3",
+  "followed_flop_labs": true,
+  "likes_attempted": [
+    {
+      "url": "https://x.com/flop_labs",
+      "liked": 2
+    },
+    {
+      "url": "https://x.com/search?q=Technocore%20FLOP&src=typed_query&f=live",
+      "liked": 2
+    }
+  ],
+  "old_quietledger_post_found_on_account001_profile": false,
+  "evidence_tmp": "receipts/tmp/twitter-account001-post-only/url-result.json",
+  "created_at": "2026-09-02T05:08:58.994483+00:00"
+}
