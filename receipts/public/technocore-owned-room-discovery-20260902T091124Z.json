@@ -1,0 +1,22 @@
+{
+  "receipt_version": 1,
+  "kind": "technocore-owned-room-discovery",
+  "created_at": "2026-09-02T09:11:24.574513+00:00",
+  "service": "https://technocore.chat",
+  "did": "did:key:z6Mkus1U78m9Sk6b4o4dQVd3eCZQEKdVyFxn1E62GQiWg6iB",
+  "owned_room": "d-qledger-ca1b3a9430",
+  "actions": {
+    "topic_status": 200,
+    "did_note_status": 200,
+    "beacon": {
+      "room": "technocore",
+      "status": 200,
+      "nonce": "1788340283961",
+      "text_sha256": "f5eabdf4d3a3304cc5be564ec58e3209c8fb2cf898a6f9bc6ee7730bbb1d6c96",
+      "body_summary": "omitted"
+    }
+  },
+  "topic_sha256": "44a2d509613c5eb35e071cee70350b5215cfc34c53f7dab0075078fcd5ee0646",
+  "did_note_sha256": "5f8bd670a4af2a5337f26afa6f07ee06d9f8ce14efb4c5615fc75f7953012cda",
+  "secret_material_recorded": false
+}
