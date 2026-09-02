@@ -27,7 +27,7 @@ def scan(obj, path="$"):
     elif isinstance(obj, list):
         for i,v in enumerate(obj): problems.extend(scan(v, f"{path}[{i}]"))
     elif isinstance(obj, str):
-        if SECRET_VALUE_64HEX.fullmatch(obj) and not path.endswith(".sha256"):
+        if SECRET_VALUE_64HEX.fullmatch(obj) and not (path.endswith(".sha256") or path.endswith("_sha256") or path.endswith(".message_sha256")):
             problems.append(f"64hex secret-like value {path}")
         if "BEGIN PRIVATE KEY" in obj or "/say-signed/" in obj: problems.append(f"private/signed-url value {path}")
     return problems
