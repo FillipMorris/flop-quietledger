@@ -1,0 +1,16 @@
+{
+  "attestation_version": 1,
+  "algorithm": "Ed25519",
+  "did": "did:key:z6Mkus1U78m9Sk6b4o4dQVd3eCZQEKdVyFxn1E62GQiWg6iB",
+  "domain": "@artifact",
+  "nonce": "1788329445466",
+  "repository": "https://github.com/FillipMorris/flop-quietledger",
+  "commit": "ca86a35587d5c00f63b9dbd0874ba383f8208884",
+  "statement": "technocore-contribution-v1|https://github.com/FillipMorris/flop-quietledger|ca86a35587d5c00f63b9dbd0874ba383f8208884",
+  "signature": "CpTM9uiZb6du84aD0dsCz5_dhec3ED2j_3gMuZQERLTY3AraysARoBIlv-M3dhma97ysBlbH3e0IC77xTk0LCg",
+  "signer_source": {
+    "commit": "8bd794b953d7b3fbcff71f4db2e3257f68d144c3",
+    "sha256": "667e3d6cf48301d1b43f44c9b328d73ec1dbf413ddc89fcb740baf86f6406c15",
+    "cryptography": "50.0.0"
+  }
+}
