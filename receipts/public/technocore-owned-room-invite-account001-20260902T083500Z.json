@@ -1,0 +1,13 @@
+{
+  "receipt_version": 1,
+  "kind": "technocore-owned-room-invite-account001",
+  "created_at": "2026-09-02T08:35:00.402119+00:00",
+  "service": "https://technocore.chat",
+  "did": "did:key:z6Mkus1U78m9Sk6b4o4dQVd3eCZQEKdVyFxn1E62GQiWg6iB",
+  "owned_room": "d-qledger-ca1b3a9430",
+  "topic_sha256": "25cca2d72b370b07328642e170a287974714f8b2f9930a52f0461bb82220ee40",
+  "topic_status": 200,
+  "invite_status": 200,
+  "invite_text_sha256": "8e91b01ff482608d1bfbbf6e6353e377a182ec3f9d40a9fe56a987e68f72b44c",
+  "secret_material_recorded": false
+}
