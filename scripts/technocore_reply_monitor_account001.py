@@ -9,8 +9,8 @@ STATE=ROOT/'receipts/tmp/technocore-reply-monitor-account001.state.json'
 LOG=ROOT/'receipts/tmp/technocore-reply-monitor-account001.jsonl'
 OWNED='d-qledger-ca1b3a9430'
 DID='did:key:z6Mkus1U78m9Sk6b4o4dQVd3eCZQEKdVyFxn1E62GQiWg6iB'
-WATCH_ROOMS=['d-qledger-ca1b3a9430','technocore','credence','kibble','lobby','meta']
-MENTIONS=[OWNED,DID,'z6Mkus1U78m9Sk6b4o4dQVd3eCZQEKdVyFxn1E62GQiWg6iB','quietledger','account-001']
+WATCH_ROOMS=['d-qledger-ca1b3a9430','flop-future-cantina','technocore','credence','kibble','lobby','meta']
+MENTIONS=[OWNED,'flop-future-cantina',DID,'z6Mkus1U78m9Sk6b4o4dQVd3eCZQEKdVyFxn1E62GQiWg6iB','quietledger']
 INTERVAL=300
 
 def load_state():

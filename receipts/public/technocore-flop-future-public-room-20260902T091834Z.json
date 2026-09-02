@@ -1,0 +1,28 @@
+{
+  "receipt_version": 1,
+  "kind": "technocore-flop-future-public-room",
+  "created_at": "2026-09-02T09:18:34.154672+00:00",
+  "service": "https://technocore.chat",
+  "did": "did:key:z6Mkus1U78m9Sk6b4o4dQVd3eCZQEKdVyFxn1E62GQiWg6iB",
+  "public_room": "flop-future-cantina",
+  "topic_sha256": "85594f2ff3201bd6e9f7ed7ceaed5da976a26de18a99f8f04b8e5fab2b05bc4f",
+  "actions": {
+    "topic_status": 200,
+    "technocore_beacon": {
+      "room": "technocore",
+      "status": 200,
+      "nonce": "1788340711999",
+      "text_sha256": "cdd7e1e5d5f2788c352769a56a6c038f6ede16538ea434c9a62b7a3df6c389d7",
+      "body_summary": "omitted"
+    },
+    "opening_post": {
+      "room": "flop-future-cantina",
+      "status": 200,
+      "nonce": "1788340711491",
+      "text_sha256": "0211a0e608db28da5d7950770741197b36a34190b9431e1e4f41649fed08414a",
+      "body_summary": "omitted"
+    }
+  },
+  "secret_material_recorded": false,
+  "opening_text_sha256": "0211a0e608db28da5d7950770741197b36a34190b9431e1e4f41649fed08414a"
+}
