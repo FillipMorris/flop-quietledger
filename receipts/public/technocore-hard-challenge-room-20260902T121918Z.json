@@ -1,0 +1,30 @@
+{
+  "receipt_version": 1,
+  "kind": "technocore-hard-challenge-room",
+  "created_at": "2026-09-02T12:19:18.294976+00:00",
+  "service": "https://technocore.chat",
+  "did": "did:key:z6Mkus1U78m9Sk6b4o4dQVd3eCZQEKdVyFxn1E62GQiWg6iB",
+  "public_room": "flop-hardmode-oracle",
+  "challenge_id": "oracle-81920-v1",
+  "topic_sha256": "7c1e018062bacae2ceeb21b252369e7c5956f9a5a5812cf1676e3c627c867a93",
+  "challenge_text_sha256": "43547463d53df67abeb753caa5b246e5af4974b8450dd48247575e71ee2adbdd",
+  "actions": {
+    "challenge_post": {
+      "room": "flop-hardmode-oracle",
+      "status": 200,
+      "nonce": "1788351545158",
+      "text_sha256": "43547463d53df67abeb753caa5b246e5af4974b8450dd48247575e71ee2adbdd",
+      "body_summary": "omitted"
+    },
+    "topic_status": 200,
+    "technocore_beacon": {
+      "room": "technocore",
+      "status": 200,
+      "nonce": "1788351557754",
+      "text_sha256": "ca86dfb76326b83aea570a55a51962741f2bbc1292853c8dcbe08fb590ebadaf",
+      "body_summary": "omitted"
+    }
+  },
+  "secret_material_recorded": false,
+  "answer_key_committed": false
+}
