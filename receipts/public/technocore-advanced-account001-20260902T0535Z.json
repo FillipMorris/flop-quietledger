@@ -21,7 +21,7 @@
     {
       "name": "create_private_signed_mailbox_mb_p",
       "status": "failed",
-      "room_hash": "withheld-private-capability-hash",
+      "room_hash": "withheld-capability-fingerprint",
       "result": {
         "ok": false,
         "status": null,
@@ -31,7 +31,7 @@
     {
       "name": "e2e_encrypted_private_room",
       "status": "partial",
-      "room_hash": "withheld-private-capability-hash",
+      "room_hash": "withheld-capability-fingerprint",
       "mailbox_delivery": {
         "ok": false,
         "status": null,
@@ -89,7 +89,7 @@
     {
       "name": "private_scratch_note_p_namespace",
       "status": "done",
-      "namespace_hash": "withheld-private-capability-hash",
+      "namespace_hash": "withheld-capability-fingerprint",
       "result": {
         "ok": true,
         "status": 200,

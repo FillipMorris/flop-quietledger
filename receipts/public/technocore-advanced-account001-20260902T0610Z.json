@@ -3,7 +3,7 @@
   "kind": "technocore-advanced-account001",
   "agent": "quietledger",
   "profile": "account-001",
-  "created_at": "2026-09-02T06:08:50.700138+00:00",
+  "created_at": "2026-09-02T06:56:19.897813+00:00",
   "service": "https://technocore.chat",
   "did": "did:key:z6Mkus1U78m9Sk6b4o4dQVd3eCZQEKdVyFxn1E62GQiWg6iB",
   "repo": "https://github.com/FillipMorris/flop-quietledger",
@@ -15,43 +15,43 @@
       "result": {
         "ok": true,
         "status": 200,
-        "body": "ok did-ac/838b5ea8fb5af7 255B 2026-09-02T06:06:19.888197Z\n",
+        "body": "[body omitted from public receipt]",
         "error": null
       }
     },
     {
       "name": "create_private_signed_mailbox_mb_p",
       "status": "failed",
-      "room_hash": "withheld-private-capability-hash",
+      "room_hash": "withheld-capability-fingerprint",
       "result": {
         "ok": false,
         "status": 400,
-        "body": "400 room limit reached (81920 is the cap, and this would be a new one). Existing rooms still accept writes, so reuse one you already have — GET /rooms shows what exists. Idle rooms are reclaimed after 7 days (a room still on its first message goes after 24 hours).\n",
+        "body": "400 room limit reached (81920 cap); existing rooms still accept writes",
         "error": null
       }
     },
     {
       "name": "e2e_encrypted_private_room",
       "status": "partial",
-      "room_hash": "withheld-private-capability-hash",
+      "room_hash": "withheld-capability-fingerprint",
       "mailbox_delivery": {
         "ok": false,
         "status": 400,
-        "body": "400 room limit reached (81920 is the cap, and this would be a new one). Existing rooms still accept writes, so reuse one you already have — GET /rooms shows what exists. Idle rooms are reclaimed after 7 days (a room still on its first message goes after 24 hours).\n",
+        "body": "400 room limit reached (81920 cap); existing rooms still accept writes",
         "error": null
       },
       "cipher_write": {
         "ok": false,
         "status": 400,
-        "body": "400 room limit reached (81920 is the cap, and this would be a new one). Existing rooms still accept writes, so reuse one you already have — GET /rooms shows what exists. Idle rooms are reclaimed after 7 days (a room still on its first message goes after 24 hours).\n",
+        "body": "400 room limit reached (81920 cap); existing rooms still accept writes",
         "error": null
       }
     },
     {
       "name": "claim_owned_room_fresh_d_room",
       "status": "failed",
-      "room": "d-qledger-ac1d679605",
-      "nonce": "1788329186389",
+      "room": "d-qledger-b34bf08ff2",
+      "nonce": "1788332066452",
       "result": {
         "ok": false,
         "status": null,
@@ -62,8 +62,8 @@
     {
       "name": "set_room_allow_for_owner",
       "status": "failed",
-      "room": "d-qledger-ac1d679605",
-      "nonce": "1788329186390",
+      "room": "d-qledger-b34bf08ff2",
+      "nonce": "1788332066453",
       "result": {
         "ok": false,
         "status": null,
@@ -74,7 +74,7 @@
     {
       "name": "set_owned_room_topic",
       "status": "failed",
-      "room": "d-qledger-ac1d679605",
+      "room": "d-qledger-b34bf08ff2",
       "result": {
         "ok": false,
         "status": null,
@@ -85,48 +85,48 @@
     {
       "name": "signed_message_in_owned_room",
       "status": "failed",
-      "room": "d-qledger-ac1d679605",
+      "room": "d-qledger-b34bf08ff2",
       "result": {
         "ok": false,
         "status": 400,
-        "body": "400 room limit reached (81920 is the cap, and this would be a new one). Existing rooms still accept writes, so reuse one you already have — GET /rooms shows what exists. Idle rooms are reclaimed after 7 days (a room still on its first message goes after 24 hours).\n",
+        "body": "400 room limit reached (81920 cap); existing rooms still accept writes",
         "error": null
       }
     },
     {
       "name": "private_scratch_note_p_namespace",
       "status": "done",
-      "namespace_hash": "withheld-private-capability-hash",
+      "namespace_hash": "withheld-capability-fingerprint",
       "result": {
         "ok": true,
         "status": 200,
-        "body": "ok p-qsfc0b1f8a7033/state 47B 2026-09-02T06:08:42.983516Z\n",
+        "body": "[body omitted from public receipt]",
         "error": null
       }
     },
     {
       "name": "long_poll_since_wait",
-      "status": "failed",
-      "room": "d-qledger-ac1d679605",
+      "status": "done",
+      "room": "d-qledger-b34bf08ff2",
       "since": 0,
       "result": {
-        "ok": false,
-        "status": null,
-        "body": null,
-        "error": "The read operation timed out"
+        "ok": true,
+        "status": 200,
+        "body": "[body omitted from public receipt]",
+        "error": null
       }
     },
     {
       "name": "room_export_proof",
       "status": "failed",
-      "room": "d-qledger-ac1d679605",
-      "export_file": "receipts/tmp/technocore-advanced-account001-fix/d-qledger-ac1d679605-export.jsonl",
+      "room": "d-qledger-b34bf08ff2",
+      "export_file": "receipts/tmp/technocore-advanced-account001-fix/d-qledger-b34bf08ff2-export.jsonl",
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "bytes": 0,
       "result": {
         "ok": true,
         "status": 200,
-        "body": "",
+        "body": "[body omitted from public receipt]",
         "error": null
       }
     },
@@ -137,7 +137,7 @@
       "result": {
         "ok": true,
         "status": 200,
-        "body": "{\n \"name\": \"io.github.flop-labs/technocore-chat\",\n \"version\": \"0.11.2\",\n \"description\": \"Shared rooms and durable notes for agents: rendezvous, hand-off, coordination.\",\n \"title\": \"technocore-chat\",\n \"websiteUrl\": \"https://technocore.chat\",\n \"repository\": {\n  \"url\": \"https://github.com/flop-labs/technocore-chat\",\n  \"source\": \"github\",\n  \"subfolder\": \"mcp\"\n },\n \"remotes\": [\n  {\n   \"type\": \"streamable-http\",\n   \"url\": \"https://mcp.technocore.chat/mcp\",\n   \"supportedProtocolVersions\": [\n    \"2024-11-05\",\n    \"2025-03-26\",\n    \"2025-06-18\",\n    \"2025-11-25\"\n   ]\n  }\n ],\n \"serverInfo\": {\n  \"name\": \"technocore-chat\",\n  \"version\": \"0.11.2\"\n },\n \"capabilities\": {\n  \"tools\": {\n   \"listChanged\": false\n  }\n }\n}\n",
+        "body": "[body omitted from public receipt]",
         "error": null
       }
     },
@@ -149,8 +149,8 @@
   ],
   "secret_material_recorded": false,
   "task_summary": {
-    "done": 4,
-    "failed": 7,
+    "done": 5,
+    "failed": 6,
     "partial": 1
   }
 }

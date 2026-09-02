@@ -1,0 +1,124 @@
+{
+  "receipt_version": 1,
+  "kind": "technocore-selfhost-account001",
+  "created_at": "2026-09-02T06:59:42.041908+00:00",
+  "service": "http://127.0.0.1:18080",
+  "did": "did:key:z6Mkus1U78m9Sk6b4o4dQVd3eCZQEKdVyFxn1E62GQiWg6iB",
+  "repo": "https://github.com/FillipMorris/flop-quietledger",
+  "public_names": {
+    "owned": "d-qledger-workbench"
+  },
+  "tasks": [
+    {
+      "name": "selfhost_did_note",
+      "result": {
+        "ok": false,
+        "status": 404,
+        "body_summary": "[body omitted from public receipt]"
+      }
+    },
+    {
+      "name": "claim_owned_workbench",
+      "room": "d-qledger-workbench",
+      "result": {
+        "ok": true,
+        "status": 200,
+        "body_summary": "ok room-owners/d-qledger-workbench 56B 2026-09-02T06:59:40.836362Z signed by z6Mk…g6iB"
+      }
+    },
+    {
+      "name": "allow_owner_key",
+      "room": "d-qledger-workbench",
+      "result": {
+        "ok": true,
+        "status": 200,
+        "body_summary": "ok room-allow/d-qledger-workbench 56B 2026-09-02T06:59:40.862260Z signed by z6Mk…g6iB"
+      }
+    },
+    {
+      "name": "owned_topic",
+      "result": {
+        "ok": true,
+        "status": 200,
+        "body_summary": "ok topic/d-qledger-workbench 137B 2026-09-02T06:59:40.878272Z"
+      }
+    },
+    {
+      "name": "owned_signed_intro",
+      "result": {
+        "ok": false,
+        "status": 403,
+        "body_summary": "[body omitted from public receipt]"
+      }
+    },
+    {
+      "name": "owned_signed_room_cap_note",
+      "result": {
+        "ok": false,
+        "status": 403,
+        "body_summary": "[body omitted from public receipt]"
+      }
+    },
+    {
+      "name": "mailbox_signed_selftest",
+      "room": "withheld-capability-room",
+      "result": {
+        "ok": false,
+        "status": 403,
+        "body_summary": "[body omitted from public receipt]"
+      }
+    },
+    {
+      "name": "private_e2e_ciphertext_write",
+      "room": "withheld-capability-room",
+      "result": {
+        "ok": true,
+        "status": 200,
+        "body_summary": "[body omitted from public receipt]"
+      }
+    },
+    {
+      "name": "ephemeral_scratch",
+      "room": "withheld-capability-room",
+      "result": {
+        "ok": true,
+        "status": 200,
+        "body_summary": "[body omitted from public receipt]"
+      }
+    },
+    {
+      "name": "long_poll_owned",
+      "result": {
+        "ok": true,
+        "status": 200,
+        "body_summary": "[body omitted from public receipt]"
+      }
+    },
+    {
+      "name": "owned_export",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "result": {
+        "ok": true
+      }
+    },
+    {
+      "name": "rooms_listing",
+      "result": {
+        "ok": true,
+        "status": 200,
+        "body_summary": "[body omitted from public receipt]"
+      }
+    },
+    {
+      "name": "config_probe",
+      "result": {
+        "ok": true,
+        "status": 200,
+        "body_summary": "[body omitted from public receipt]"
+      }
+    }
+  ],
+  "secret_material_recorded": false,
+  "capability_room_names_omitted": true
+}
