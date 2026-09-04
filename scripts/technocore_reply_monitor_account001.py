@@ -9,8 +9,8 @@ STATE=ROOT/'receipts/tmp/technocore-reply-monitor-account001.state.json'
 LOG=ROOT/'receipts/tmp/technocore-reply-monitor-account001.jsonl'
 OWNED='d-qledger-ca1b3a9430'
 DID='did:key:z6Mkus1U78m9Sk6b4o4dQVd3eCZQEKdVyFxn1E62GQiWg6iB'
-WATCH_ROOMS=['d-qledger-ca1b3a9430','flop-future-cantina','flop-hardmode-oracle','technocore','credence','kibble','lobby','meta','flop','flop_labs','flop-governance','flop_governance','flop-network','flop-collective','gpu-miners','poui_validators','validators','monflop-node','cryptoonflop']
-MENTIONS=[OWNED,'flop-future-cantina','flop-hardmode-oracle','oracle-81920',DID,'z6Mkus1U78m9Sk6b4o4dQVd3eCZQEKdVyFxn1E62GQiWg6iB','quietledger']
+WATCH_ROOMS=['d-qledger-ca1b3a9430','flop-future-cantina','flop-hardmode-oracle','technocore','credence','kibble','lobby','meta','flop','flop_labs','flop-governance','flop_governance','flop-network','flop-collective','gpu-miners','poui_validators','validators','monflop-node','cryptoonflop','ai','vector_storage','tee_attestation','a2a_mesh_telemetry','cross_chain_bridge']
+MENTIONS=[OWNED,'flop-future-cantina','flop-hardmode-oracle','oracle-81920','QL-NONFLOP-AI-0904','QL-NONFLOP-RAG-0904','QL-NONFLOP-TEE-0904','QL-NONFLOP-A2A-0904','QL-NONFLOP-BRIDGE-0904',DID,'z6Mkus1U78m9Sk6b4o4dQVd3eCZQEKdVyFxn1E62GQiWg6iB','quietledger']
 INTERVAL=300
 
 def load_state():
