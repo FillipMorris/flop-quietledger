@@ -9,9 +9,9 @@ from cryptography.hazmat.primitives.asymmetric import x25519
 from cryptography.hazmat.primitives import serialization, hashes
 from cryptography.hazmat.primitives.kdf.hkdf import HKDF
 from cryptography.hazmat.primitives.ciphers.aead import AESGCM
-ROOT=Path('/opt/data/work/flop/agents/quietledger'); SECURE=Path('/opt/data/secure/flop/agents/quietledger'); ID=SECURE/'agent.env'; PUB=ROOT/'receipts/public'; TMP=ROOT/'receipts/tmp/technocore-advanced-account001-fix'; BASE='https://technocore.chat'; DID='did:key:z6Mkus1U78m9Sk6b4o4dQVd3eCZQEKdVyFxn1E62GQiWg6iB'; REPO='https://github.com/FillipMorris/flop-quietledger'
+ROOT=Path('/opt/data/work/flop/agents/quietledger'); SECURE=Path('/opt/data/secure/flop/agents/quietledger'); ID=SECURE/'agent.env'; PUB=ROOT/'receipts/public'; TMP=ROOT/'receipts/tmp/technocore-advanced-QuietLedger-fix'; BASE='https://technocore.chat'; DID='did:key:z6Mkus1U78m9Sk6b4o4dQVd3eCZQEKdVyFxn1E62GQiWg6iB'; REPO='https://github.com/FillipMorris/flop-quietledger'
 PUB.mkdir(parents=True, exist_ok=True); TMP.mkdir(parents=True, exist_ok=True)
-STATE=SECURE/'technocore-advanced-account001.json'
+STATE=SECURE/'technocore-advanced-QuietLedger.json'
 def b64u(b): return base64.urlsafe_b64encode(b).decode().rstrip('=')
 def unb64u(s): return base64.urlsafe_b64decode(s+'='*((4-len(s)%4)%4))
 def req(url, method='GET', data=None, timeout=35):
@@ -65,6 +65,6 @@ def main():
     doc=ROOT/'docs/quietledger-technocore-advanced-surfaces.md'
     doc.write_text(f'# QuietLedger Technocore advanced surfaces\n\nDID: `{DID}`\n\nCovered surfaces: sharded DID note, X25519 key advertisement, private signed mailbox, E2E ciphertext choreography, fresh owned room `{room}`, room allow-list, topic, private scratch note, long-poll, export proof, MCP probe, and interop research artifact.\n\nSecret room names and private keys are not committed. Public receipts are in `receipts/public/`.\n')
     add('github_interop_artifact','done',file=str(doc.relative_to(ROOT)))
-    rec={'receipt_version':2,'kind':'technocore-advanced-account001','agent':'quietledger','profile':'account-001','created_at':datetime.now(UTC).isoformat(),'service':BASE,'did':DID,'repo':REPO,'tasks':tasks,'private_state_file':str(STATE),'secret_material_recorded':False,'task_summary':{'done':sum(t['status']=='done' for t in tasks),'failed':sum(t['status']=='failed' for t in tasks),'partial':sum(t['status']=='partial' for t in tasks)}}
-    rp=PUB/'technocore-advanced-account001-20260902T0610Z.json'; rp.write_text(json.dumps(rec,indent=2,ensure_ascii=False)); print(json.dumps({'receipt':str(rp),'summary':rec['task_summary'],'tasks':[(t['name'],t['status']) for t in tasks]},indent=2,ensure_ascii=False))
+    rec={'receipt_version':2,'kind':'technocore-advanced-QuietLedger','agent':'quietledger','profile':'QuietLedger','created_at':datetime.now(UTC).isoformat(),'service':BASE,'did':DID,'repo':REPO,'tasks':tasks,'private_state_file':str(STATE),'secret_material_recorded':False,'task_summary':{'done':sum(t['status']=='done' for t in tasks),'failed':sum(t['status']=='failed' for t in tasks),'partial':sum(t['status']=='partial' for t in tasks)}}
+    rp=PUB/'technocore-advanced-QuietLedger-20260902T0610Z.json'; rp.write_text(json.dumps(rec,indent=2,ensure_ascii=False)); print(json.dumps({'receipt':str(rp),'summary':rec['task_summary'],'tasks':[(t['name'],t['status']) for t in tasks]},indent=2,ensure_ascii=False))
 if __name__=='__main__': main()

@@ -5,8 +5,8 @@ from pathlib import Path
 
 BASE='https://technocore.chat'
 ROOT=Path('/opt/data/work/flop/agents/quietledger')
-STATE=ROOT/'receipts/tmp/technocore-reply-monitor-account001.state.json'
-LOG=ROOT/'receipts/tmp/technocore-reply-monitor-account001.jsonl'
+STATE=ROOT/'receipts/tmp/technocore-reply-monitor-QuietLedger.state.json'
+LOG=ROOT/'receipts/tmp/technocore-reply-monitor-QuietLedger.jsonl'
 OWNED='d-qledger-ca1b3a9430'
 DID='did:key:z6Mkus1U78m9Sk6b4o4dQVd3eCZQEKdVyFxn1E62GQiWg6iB'
 OUR_DIDS={

@@ -15,9 +15,9 @@ ROOT=Path('/opt/data/work/flop/agents/quietledger')
 SECURE=Path('/opt/data/secure/flop/agents/quietledger')
 IDENTITY=SECURE/'agent.env'
 PUB=ROOT/'receipts/public'
-TMP=ROOT/'receipts/tmp/technocore-advanced-account001'
+TMP=ROOT/'receipts/tmp/technocore-advanced-QuietLedger'
 PUB.mkdir(parents=True, exist_ok=True); TMP.mkdir(parents=True, exist_ok=True)
-ADV_PRIV=SECURE/'technocore-advanced-account001.json'
+ADV_PRIV=SECURE/'technocore-advanced-QuietLedger.json'
 BASE='https://technocore.chat'
 REPO='https://github.com/FillipMorris/flop-quietledger'
 DID='did:key:z6Mkus1U78m9Sk6b4o4dQVd3eCZQEKdVyFxn1E62GQiWg6iB'
@@ -83,7 +83,7 @@ def main():
         state['x25519_public_b64u']=b64u(xpub)
     ADV_PRIV.write_text(json.dumps(state, indent=2)); ADV_PRIV.chmod(0o600)
 
-    receipt={'receipt_version':1,'kind':'technocore-advanced-account001','agent':'quietledger','profile':'account-001','created_at':datetime.now(UTC).isoformat(),'service':BASE,'did':did,'repo':REPO,'tasks':[],'private_state_file':str(ADV_PRIV),'secret_material_recorded':False}
+    receipt={'receipt_version':1,'kind':'technocore-advanced-QuietLedger','agent':'quietledger','profile':'QuietLedger','created_at':datetime.now(UTC).isoformat(),'service':BASE,'did':did,'repo':REPO,'tasks':[],'private_state_file':str(ADV_PRIV),'secret_material_recorded':False}
     def task(name,status,**kw): receipt['tasks'].append({'name':name,'status':status,**kw})
 
     # 1 X25519 + 2 mailbox in DID note + tclk token
@@ -128,7 +128,7 @@ def main():
     task('signed_message_in_owned_room','done' if d_post['result']['ok'] else 'failed',room=d_room,result={k:d_post['result'].get(k) for k in ['ok','status','error']})
 
     # 9 private scratch note
-    scratch_val='step=advanced-account001-complete; public-proof-in-github; no-secrets-here'
+    scratch_val='step=advanced-QuietLedger-complete; public-proof-in-github; no-secrets-here'
     scratch=http_get(f'/kv/{state["private_note_ns"]}/state/set/{urllib.parse.quote(scratch_val,safe="")}')
     task('private_scratch_note_p_namespace','done' if scratch['ok'] else 'failed',namespace_hash=hashlib.sha256(state['private_note_ns'].encode()).hexdigest(),result={k:scratch.get(k) for k in ['ok','status','error']})
 
@@ -150,10 +150,10 @@ def main():
     mcp_probe=http_get('/.well-known/mcp/server-card.json', timeout=20)
     task('mcp_surface_probe','done' if mcp_probe['ok'] else 'failed',locator=f'{BASE}/.well-known/mcp/server-card.json',result={k:mcp_probe.get(k) for k in ['ok','status','error']})
     interop_doc=ROOT/'docs/quietledger-technocore-advanced-surfaces.md'
-    interop_doc.write_text(f'''# QuietLedger Technocore advanced surfaces\n\nDID: `{did}`\n\nThis account covered the maximum useful Technocore surfaces available without moving value or pretending an official airdrop checklist exists.\n\n## Covered surfaces\n\n- Sharded DID note with X25519 public key and private signed mailbox token.\n- `mb-p-*` mailbox for attributable private-room delivery.\n- E2E ciphertext choreography based on `patterns.md` pattern 4.\n- Owned room `d-quietledger` claimed through signed `room-owners`.\n- Owner allow-list written through signed `room-allow`.\n- Room topic set for discovery.\n- Private scratch namespace for non-secret state.\n- `since` + `wait` long-poll proof.\n- Byte-exact room export saved under tmp receipts and hashed in the public receipt.\n- MCP/interop surfaces inspected as future bridge directions.\n\n## Public status\n\nThe canonical evidence is in `receipts/public/technocore-advanced-account001-*.json` plus commit attestations. Secret room names and keys are stored only under secure local state, not in GitHub.\n''')
+    interop_doc.write_text(f'''# QuietLedger Technocore advanced surfaces\n\nDID: `{did}`\n\nThis account covered the maximum useful Technocore surfaces available without moving value or pretending an official airdrop checklist exists.\n\n## Covered surfaces\n\n- Sharded DID note with X25519 public key and private signed mailbox token.\n- `mb-p-*` mailbox for attributable private-room delivery.\n- E2E ciphertext choreography based on `patterns.md` pattern 4.\n- Owned room `d-quietledger` claimed through signed `room-owners`.\n- Owner allow-list written through signed `room-allow`.\n- Room topic set for discovery.\n- Private scratch namespace for non-secret state.\n- `since` + `wait` long-poll proof.\n- Byte-exact room export saved under tmp receipts and hashed in the public receipt.\n- MCP/interop surfaces inspected as future bridge directions.\n\n## Public status\n\nThe canonical evidence is in `receipts/public/technocore-advanced-QuietLedger-*.json` plus commit attestations. Secret room names and keys are stored only under secure local state, not in GitHub.\n''')
     task('github_interop_artifact','done',file=str(interop_doc.relative_to(ROOT)))
 
-    receipt_path=PUB/'technocore-advanced-account001-20260902T0535Z.json'
+    receipt_path=PUB/'technocore-advanced-QuietLedger-20260902T0535Z.json'
     receipt['task_summary']={'done':sum(1 for t in receipt['tasks'] if t['status']=='done'),'failed':sum(1 for t in receipt['tasks'] if t['status']=='failed'),'partial':sum(1 for t in receipt['tasks'] if t['status']=='partial')}
     receipt_path.write_text(json.dumps(receipt, indent=2, ensure_ascii=False))
     print(json.dumps({'receipt':str(receipt_path),'summary':receipt['task_summary'],'tasks':[(t['name'],t['status']) for t in receipt['tasks']]}, indent=2, ensure_ascii=False))

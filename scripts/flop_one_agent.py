@@ -19,7 +19,7 @@ IDENTITY = Path('/opt/data/secure/flop/agents/quietledger/agent.env')
 RECEIPTS = ROOT / 'receipts' / 'public'
 
 INTRO_MESSAGE = (
-    'quietledger/account01 online: one persistent DID for useful Technocore work; '
+    'quietledger/QuietLedger online: one persistent DID for useful Technocore work; '
     'keeping public receipts, avoiding faucet spam and one-shot identity churn; '
     'will publish concise protocol observations and signed GitHub commit attestations.'
 )

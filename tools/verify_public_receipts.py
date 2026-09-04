@@ -13,6 +13,7 @@ DID_RE = re.compile(r"did:key:z6Mk[1-9A-HJ-NP-Za-km-z]{44}")
 SHA_RE = re.compile(r"^[0-9a-f]{40}$")
 SECRET_KEYS = re.compile(r"(?:seed|private|token|cookie|password|secret|signed_url|wallet)", re.I)
 SECRET_VALUE_64HEX = re.compile(r"^[0-9a-f]{64}$", re.I)
+PUBLIC_ACCOUNT_LABELS = re.compile(r"account[-_ ]?0*1|account001|account01|account 1", re.I)
 EXPECTED_DID = "did:key:z6Mkus1U78m9Sk6b4o4dQVd3eCZQEKdVyFxn1E62GQiWg6iB"
 # Public bootstrap-panel identities created for neutral non-FLOP rooms.
 # Seeds stay in secure storage; these DIDs are safe public identifiers.
@@ -35,6 +36,8 @@ def scan(obj, path="$"):
     elif isinstance(obj, list):
         for i,v in enumerate(obj): problems.extend(scan(v, f"{path}[{i}]"))
     elif isinstance(obj, str):
+        if PUBLIC_ACCOUNT_LABELS.search(obj):
+            problems.append(f"public account-number label {path}")
         if SECRET_VALUE_64HEX.fullmatch(obj) and not (path.endswith(".sha256") or path.endswith("_sha256") or path.endswith(".message_sha256")):
             problems.append(f"64hex secret-like value {path}")
         if "BEGIN PRIVATE KEY" in obj or "/say-signed/" in obj: problems.append(f"private/signed-url value {path}")

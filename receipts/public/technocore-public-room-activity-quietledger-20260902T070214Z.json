@@ -1,6 +1,6 @@
 {
   "receipt_version": 1,
-  "kind": "technocore-public-room-activity-account001",
+  "kind": "technocore-public-room-activity-QuietLedger",
   "created_at": "2026-09-02T07:02:16.741957+00:00",
   "service": "https://technocore.chat",
   "results": [

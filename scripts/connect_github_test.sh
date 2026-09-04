@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 set -euo pipefail
-# Isolated GitHub auth for FLOP account01. Token is read from stdin and never printed.
+# Isolated GitHub auth for FLOP QuietLedger. Token is read from stdin and never printed.
 SECURE_DIR="/opt/data/secure/flop/agents/quietledger"
 export GH_CONFIG_DIR="$SECURE_DIR/gh"
 mkdir -p "$GH_CONFIG_DIR"

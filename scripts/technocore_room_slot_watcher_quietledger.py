@@ -5,8 +5,8 @@ from datetime import datetime, UTC
 from pathlib import Path
 
 ROOT=Path('/opt/data/work/flop/agents/quietledger')
-LOG=ROOT/'receipts/tmp/technocore-room-slot-watcher-account001.log'
-DONE=ROOT/'receipts/tmp/technocore-room-slot-watcher-account001.done'
+LOG=ROOT/'receipts/tmp/technocore-room-slot-watcher-QuietLedger.log'
+DONE=ROOT/'receipts/tmp/technocore-room-slot-watcher-QuietLedger.done'
 INTERVAL=600
 DEADLINE=time.time()+24*3600
 
@@ -18,10 +18,10 @@ def log(s):
 
 log('watcher started: retry every 600s, max 24h')
 while time.time()<DEADLINE:
-    p=subprocess.run(['/opt/hermes/.venv/bin/python','scripts/technocore_advanced_account001_fix.py'],cwd=str(ROOT),text=True,capture_output=True,timeout=420)
+    p=subprocess.run(['/opt/hermes/.venv/bin/python','scripts/technocore_advanced_QuietLedger_fix.py'],cwd=str(ROOT),text=True,capture_output=True,timeout=420)
     log(f'exit={p.returncode} stdout={p.stdout.strip()!r} stderr={p.stderr.strip()[:500]!r}')
     # success condition: newest public receipt says mailbox/owned-room no longer hit room limit
-    receipts=sorted((ROOT/'receipts/public').glob('technocore-advanced-account001-*.json'))
+    receipts=sorted((ROOT/'receipts/public').glob('technocore-advanced-QuietLedger-*.json'))
     if receipts:
         data=json.loads(receipts[-1].read_text())
         bodies=json.dumps(data,ensure_ascii=False)

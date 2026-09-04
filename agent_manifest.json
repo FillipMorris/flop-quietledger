@@ -1,6 +1,6 @@
 {
   "schema": "flop-one-agent-v1",
-  "agent_id": "account01",
+  "agent_id": "QuietLedger",
   "role": "quietledger",
   "technocore_identity_path": "/opt/data/secure/flop/agents/quietledger/agent.env",
   "public_receipts_dir": "/opt/data/work/flop/agents/quietledger/receipts/public",

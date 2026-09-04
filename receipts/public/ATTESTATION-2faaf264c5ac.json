@@ -6,7 +6,7 @@
   "nonce": "1788325804034",
   "repository": "https://github.com/FillipMorris/flop-quietledger",
   "commit": "2faaf264c5ac4951a8111a65550f6cf2412eed85",
-  "statement": "x-social-account001-v1|https://github.com/FillipMorris/flop-quietledger|2faaf264c5ac4951a8111a65550f6cf2412eed85|https://x.com/cyberkot1eta/status/2095015053552414957",
+  "statement": "x-social-QuietLedger-v1|https://github.com/FillipMorris/flop-quietledger|2faaf264c5ac4951a8111a65550f6cf2412eed85|https://x.com/cyberkot1eta/status/2095015053552414957",
   "signature": "BnhutrYpURUNWFzTG2F5MeXjTvygs659CuSXlJj_7i3e3mj2jdJtR6lj9mEy2cfHK-xQ19JE2Fx6mGaS2fT1DQ",
   "signer_source": {
     "method": "local-secure-sign-seed",

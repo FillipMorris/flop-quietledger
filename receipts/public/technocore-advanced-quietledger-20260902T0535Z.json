@@ -1,8 +1,8 @@
 {
   "receipt_version": 1,
-  "kind": "technocore-advanced-account001",
+  "kind": "technocore-advanced-QuietLedger",
   "agent": "quietledger",
-  "profile": "account-001",
+  "profile": "QuietLedger",
   "created_at": "2026-09-02T06:02:09.059252+00:00",
   "service": "https://technocore.chat",
   "did": "did:key:z6Mkus1U78m9Sk6b4o4dQVd3eCZQEKdVyFxn1E62GQiWg6iB",
@@ -111,7 +111,7 @@
       "name": "room_export_proof",
       "status": "done",
       "room": "d-quietledger",
-      "export_file": "receipts/tmp/technocore-advanced-account001/d-quietledger-export.jsonl",
+      "export_file": "receipts/tmp/technocore-advanced-QuietLedger/d-quietledger-export.jsonl",
       "sha256": "d550014a54a152d4dd45954411013d0cf57d49af397ccfc3aa3cb5cbe72dcf02",
       "bytes": 20000,
       "result": {

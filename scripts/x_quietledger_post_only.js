@@ -1,6 +1,6 @@
 const { chromium }=require('playwright-core');
 const fs=require('fs'); const path=require('path');
-const OUT='/opt/data/work/flop/agents/quietledger/receipts/tmp/twitter-account001-post-only'; fs.mkdirSync(OUT,{recursive:true});
+const OUT='/opt/data/work/flop/agents/quietledger/receipts/tmp/twitter-QuietLedger-post-only'; fs.mkdirSync(OUT,{recursive:true});
 const CDP=process.env.CDP||'http://127.0.0.1:18801';
 const USER='cyberkot1eta';
 const TEXT=`QuietLedger maintains a public FLOP / Technocore proof chain: Ed25519 DID, GitHub receipts, and signed evidence.\n\nRepo: https://github.com/FillipMorris/flop-quietledger\n\n@flop_labs Technocore $FLOP`;
@@ -21,5 +21,5 @@ for(let pass=0; pass<5 && !url; pass++){
  for(let i=0;i<Math.min(n,12);i++){const a=p.locator('article').nth(i); const tx=await a.innerText({timeout:1500}).catch(()=> ''); if(tx.includes('QuietLedger maintains')&&tx.includes('flop-quietledger')){foundText=true; const links=await a.locator('a[href*="/status/"]').evaluateAll(els=>els.map(e=>e.href)).catch(()=>[]); url=links.find(h=>h.includes('/status/'))||links[0]||null; break}}
  if(!url){await p.mouse.wheel(0,700); await sleep(1500)}
 }
-const result={ok:!!url,foundText,new_post_url:url,text:TEXT,profile:'account-001',cdp:CDP,artifacts_dir:OUT,ts:new Date().toISOString()}; fs.writeFileSync(path.join(OUT,'post-result.json'),JSON.stringify(result,null,2)); console.log(JSON.stringify(result,null,2)); process.exit(result.ok?0:2);
-})().catch(e=>{const r={ok:false,error:String(e.message||e),profile:'account-001',cdp:CDP,artifacts_dir:OUT,ts:new Date().toISOString()}; fs.writeFileSync(path.join(OUT,'post-error.json'),JSON.stringify(r,null,2)); console.log(JSON.stringify(r,null,2)); process.exit(1)});
+const result={ok:!!url,foundText,new_post_url:url,text:TEXT,profile:'QuietLedger',cdp:CDP,artifacts_dir:OUT,ts:new Date().toISOString()}; fs.writeFileSync(path.join(OUT,'post-result.json'),JSON.stringify(result,null,2)); console.log(JSON.stringify(result,null,2)); process.exit(result.ok?0:2);
+})().catch(e=>{const r={ok:false,error:String(e.message||e),profile:'QuietLedger',cdp:CDP,artifacts_dir:OUT,ts:new Date().toISOString()}; fs.writeFileSync(path.join(OUT,'post-error.json'),JSON.stringify(r,null,2)); console.log(JSON.stringify(r,null,2)); process.exit(1)});

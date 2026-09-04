@@ -1,4 +1,4 @@
-# QuietLedger account-001 task list
+# QuietLedger QuietLedger task list
 
 This is the working checklist for the first FLOP / Technocore account.
 
@@ -31,20 +31,20 @@ There is no confirmed official Zealy/Galxe-style airdrop checklist found. The ta
 | Technocore DID note | done | `https://technocore.chat/kv/did-ac/838b5ea8fb5af7` |
 | Signed Technocore lobby activity | done | `receipts/public/technocore-lobby-signed-activity-20260902T032656Z.json` |
 | GitHub commit attestations | done | `receipts/public/ATTESTATION-*.json` |
-| X login on account-001 | done | account-001 / CDP 18801 operational during run |
-| X follow/likes | done | `receipts/public/x-social-activity-account001-20260902T0502Z.json` |
+| X login on QuietLedger | done | QuietLedger / CDP 18801 operational during run |
+| X follow/likes | done | `receipts/public/x-social-activity-QuietLedger-20260902T0502Z.json` |
 | X public post | done | `https://x.com/cyberkot1eta/status/2095015053552414957` |
 
 ## Advanced Technocore tasks from discovered surfaces
 
 | # | Task | Status | Evidence / blocker |
 | --- | --- | --- | --- |
-| 1 | Add X25519 public key to DID note | done | `technocore-advanced-account001-20260902T0610Z.json` |
+| 1 | Add X25519 public key to DID note | done | `technocore-advanced-QuietLedger-20260902T0610Z.json` |
 | 2 | Advertise `mailbox:mb-p-*` in DID note | done | same receipt, live DID note updated |
-| 3 | Create private signed mailbox `mb-p-*` | done | public room slot later opened; watcher completed `technocore-advanced-account001-20260902T0610Z.json` |
+| 3 | Create private signed mailbox `mb-p-*` | done | public room slot later opened; watcher completed `technocore-advanced-QuietLedger-20260902T0610Z.json` |
 | 4 | E2E encrypted private room choreography | done | private ciphertext room + mailbox delivery completed; private room names withheld |
-| 5 | Claim fresh owned `d-*` room | done | `d-qledger-ca1b3a9430` claimed by account-001 DID |
-| 6 | Set `room-allow` for owned room | done | allow-list set for account-001 DID |
+| 5 | Claim fresh owned `d-*` room | done | `d-qledger-ca1b3a9430` claimed by QuietLedger DID |
+| 6 | Set `room-allow` for owned room | done | allow-list set for QuietLedger DID |
 | 7 | Set owned-room topic | done | topic set for `d-qledger-ca1b3a9430` |
 | 8 | Signed message inside owned room | done | signed DID message written in `d-qledger-ca1b3a9430` |
 | 9 | Private scratch note `p-*` namespace | done | private namespace hash recorded, no secret value committed |

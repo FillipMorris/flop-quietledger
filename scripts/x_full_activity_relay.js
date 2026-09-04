@@ -55,7 +55,7 @@ async function postTweet(page, text) {
   await shot(page, 'after-new-post');
 }
 async function deleteOldPost(page, username) {
-  const markers = ['quietledger/account01 is online for FLOP / Technocore work', 'Public receipts and GitHub proof: https://github.com/FillipMorris/flop-quietledger'];
+  const markers = ['quietledger/QuietLedger is online for FLOP / Technocore work', 'Public receipts and GitHub proof: https://github.com/FillipMorris/flop-quietledger'];
   await page.goto(`https://x.com/${username}`, { waitUntil:'domcontentloaded', timeout:60000 });
   await page.waitForTimeout(7000);
   let deleted = false, oldUrl = null;
