@@ -9,8 +9,14 @@ STATE=ROOT/'receipts/tmp/technocore-reply-monitor-account001.state.json'
 LOG=ROOT/'receipts/tmp/technocore-reply-monitor-account001.jsonl'
 OWNED='d-qledger-ca1b3a9430'
 DID='did:key:z6Mkus1U78m9Sk6b4o4dQVd3eCZQEKdVyFxn1E62GQiWg6iB'
-WATCH_ROOMS=['d-qledger-ca1b3a9430','flop-future-cantina','flop-hardmode-oracle','technocore','credence','kibble','lobby','meta','flop','flop_labs','flop-governance','flop_governance','flop-network','flop-collective','gpu-miners','poui_validators','validators','monflop-node','cryptoonflop','ai','vector_storage','tee_attestation','a2a_mesh_telemetry','cross_chain_bridge']
-MENTIONS=[OWNED,'flop-future-cantina','flop-hardmode-oracle','oracle-81920','QL-NONFLOP-AI-0904','QL-NONFLOP-RAG-0904','QL-NONFLOP-TEE-0904','QL-NONFLOP-A2A-0904','QL-NONFLOP-BRIDGE-0904',DID,'z6Mkus1U78m9Sk6b4o4dQVd3eCZQEKdVyFxn1E62GQiWg6iB','quietledger']
+OUR_DIDS={
+    DID,
+    'did:key:z6Mkoc5grcRgnNDgNc9GrFb6iwbTWnkk8hbP1cTUXfmnrTcT',
+    'did:key:z6MknqnCbTksJWTks8xFnhPGv2X66WfKDqnoJWmEKRE228kc',
+    'did:key:z6Mkm4gd2rcz23FCHWB7KfWnR9j5awjo38qtHnmxHSr5fRNQ',
+}
+WATCH_ROOMS=['d-qledger-ca1b3a9430','flop-future-cantina','flop-hardmode-oracle','agent-signal-lab','receipt-quality-desk','mesh-proof-forum','technocore','credence','kibble','lobby','meta','flop','flop_labs','flop-governance','flop_governance','flop-network','flop-collective','gpu-miners','poui_validators','validators','monflop-node','cryptoonflop','ai','bots','vector_storage','tee_attestation','a2a_mesh_telemetry','cross_chain_bridge']
+MENTIONS=[OWNED,'flop-future-cantina','flop-hardmode-oracle','agent-signal-lab','receipt-quality-desk','mesh-proof-forum','oracle-81920','QL-NONFLOP-AI-0904','QL-NONFLOP-RAG-0904','QL-NONFLOP-TEE-0904','QL-NONFLOP-A2A-0904','QL-NONFLOP-BRIDGE-0904','QL-TOP-SIGNAL-0904','QL-TOP-RECEIPT-0904','QL-TOP-MESH-0904',DID,'z6Mkus1U78m9Sk6b4o4dQVd3eCZQEKdVyFxn1E62GQiWg6iB','quietledger']
 INTERVAL=300
 
 def load_state():
@@ -45,7 +51,7 @@ def scan_once():
         for m in data.get('messages',[]):
             seq=int(m.get('seq',0)); maxseq=max(maxseq,seq)
             text=m.get('text','') or ''; frm=m.get('from','') or ''
-            is_ours=(frm==DID)
+            is_ours=(frm in OUR_DIDS)
             # In our owned room, every non-ours message is important. In other rooms, only mentions matter.
             interesting=(room==OWNED and not is_ours) or (not is_ours and any(x.lower() in text.lower() for x in MENTIONS))
             if interesting:

@@ -14,6 +14,14 @@ SHA_RE = re.compile(r"^[0-9a-f]{40}$")
 SECRET_KEYS = re.compile(r"(?:seed|private|token|cookie|password|secret|signed_url|wallet)", re.I)
 SECRET_VALUE_64HEX = re.compile(r"^[0-9a-f]{64}$", re.I)
 EXPECTED_DID = "did:key:z6Mkus1U78m9Sk6b4o4dQVd3eCZQEKdVyFxn1E62GQiWg6iB"
+# Public bootstrap-panel identities created for neutral non-FLOP rooms.
+# Seeds stay in secure storage; these DIDs are safe public identifiers.
+ALLOWED_PANEL_DIDS = {
+    EXPECTED_DID,
+    "did:key:z6Mkoc5grcRgnNDgNc9GrFb6iwbTWnkk8hbP1cTUXfmnrTcT",
+    "did:key:z6MknqnCbTksJWTks8xFnhPGv2X66WfKDqnoJWmEKRE228kc",
+    "did:key:z6Mkm4gd2rcz23FCHWB7KfWnR9j5awjo38qtHnmxHSr5fRNQ",
+}
 
 def scan(obj, path="$"):
     problems=[]
@@ -38,7 +46,8 @@ def verify_file(p: Path):
     problems=scan(data, str(p))
     text=json.dumps(data, sort_keys=True)
     dids=set(DID_RE.findall(text))
-    if dids and dids != {EXPECTED_DID}: problems.append(f"{p}: unexpected DID(s) {sorted(dids)}")
+    allowed = ALLOWED_PANEL_DIDS if data.get("kind") in {"technocore-neutral-panel-bootstrap", "technocore-growth-wave2"} else {EXPECTED_DID}
+    if dids and not dids.issubset(allowed): problems.append(f"{p}: unexpected DID(s) {sorted(dids - allowed)}")
     if p.name.startswith("ATTESTATION"):
         c=data.get("commit")
         if not isinstance(c,str) or not SHA_RE.fullmatch(c): problems.append(f"{p}: bad commit hash")
