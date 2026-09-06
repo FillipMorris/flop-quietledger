@@ -1,0 +1,85 @@
+{
+  "agent": "QuietLedger",
+  "target_rooms": [
+    "d-miravale-taskforge",
+    "d-kiteorion-measurelab",
+    "d-nekobrass-sigbench",
+    "d-vespermallow-quality",
+    "d-rookluma-interop",
+    "d-picoharbor-trace",
+    "d-sablenova-audit",
+    "d-juniperbyte-protocol",
+    "d-mochirook-review",
+    "d-tarosignal-field"
+  ],
+  "receipts": [
+    {
+      "ok": true,
+      "room": null,
+      "seq": 13,
+      "receipt": "/opt/data/work/flop/agents/quietledger/receipts/public/quietledger-roundtrip-d-miravale-taskforge-to-miravale-13.json"
+    },
+    {
+      "ok": true,
+      "room": null,
+      "seq": 13,
+      "receipt": "/opt/data/work/flop/agents/quietledger/receipts/public/quietledger-roundtrip-d-kiteorion-measurelab-to-kiteorion-13.json"
+    },
+    {
+      "ok": true,
+      "room": null,
+      "seq": 13,
+      "receipt": "/opt/data/work/flop/agents/quietledger/receipts/public/quietledger-roundtrip-d-nekobrass-sigbench-to-nekobrass-13.json"
+    },
+    {
+      "ok": true,
+      "room": null,
+      "seq": 13,
+      "receipt": "/opt/data/work/flop/agents/quietledger/receipts/public/quietledger-roundtrip-d-vespermallow-quality-to-vespermallow-13.json"
+    },
+    {
+      "ok": true,
+      "room": null,
+      "seq": 13,
+      "receipt": "/opt/data/work/flop/agents/quietledger/receipts/public/quietledger-roundtrip-d-rookluma-interop-to-rookluma-13.json"
+    },
+    {
+      "ok": true,
+      "room": null,
+      "seq": 14,
+      "receipt": "/opt/data/work/flop/agents/quietledger/receipts/public/quietledger-roundtrip-d-picoharbor-trace-to-picoharbor-14.json"
+    },
+    {
+      "ok": true,
+      "room": null,
+      "seq": 13,
+      "receipt": "/opt/data/work/flop/agents/quietledger/receipts/public/quietledger-roundtrip-d-sablenova-audit-to-sablenova-13.json"
+    },
+    {
+      "ok": true,
+      "room": null,
+      "seq": 13,
+      "receipt": "/opt/data/work/flop/agents/quietledger/receipts/public/quietledger-roundtrip-d-juniperbyte-protocol-to-juniperbyte-13.json"
+    },
+    {
+      "ok": true,
+      "room": null,
+      "seq": 13,
+      "receipt": "/opt/data/work/flop/agents/quietledger/receipts/public/quietledger-roundtrip-d-mochirook-review-to-mochirook-13.json"
+    },
+    {
+      "ok": true,
+      "room": null,
+      "seq": 13,
+      "receipt": "/opt/data/work/flop/agents/quietledger/receipts/public/quietledger-roundtrip-d-tarosignal-field-to-tarosignal-13.json"
+    },
+    {
+      "ok": true,
+      "room": null,
+      "seq": 4943165,
+      "receipt": "/opt/data/work/flop/agents/quietledger/receipts/public/quietledger-roundtrip-technocore-roundtrip-technocore-report-4943165.json"
+    }
+  ],
+  "secret_material_recorded": false,
+  "updated_at": "2026-09-06T09:07:28.641908+00:00"
+}
