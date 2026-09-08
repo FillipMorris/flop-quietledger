@@ -41,5 +41,18 @@
     "outgoing_work_payment_tx": "0x172b2ade9ee44c32d56a01ce8518912636858a6e9ac08ca2547dc77ad67cb4f9",
     "incoming_work_payment_tx": "0x971d3a3bb35b514a810c146e1ef063905fd8e9821e62731f3749bbad244ac5f4",
     "pricing_basis": "XMTP-like micro-fees anchored to $5 per 100000 messages"
+  },
+  "xmtp_mainnet_payer_readiness": {
+    "status": "ready_but_not_allocated",
+    "reason": "official PayerRegistry minimumDeposit is 10 USDC; current wallet balance is below minimum",
+    "payer_registry": "0xd1c78Dee5d58eCCF1cF1CAABbfc9837215f1B82B",
+    "deposit_splitter": "0xf2346DC89311c636E3Cd6B6341aA5060CCc308e6",
+    "fee_token": "0x63C6667798fdA65E2E29228C43fbfDa0Cd4634A8",
+    "underlying_fee_token": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "minimum_deposit_usdc": "10.0",
+    "current_usdc": "0.234925",
+    "current_payer_registry_balance": "0.0",
+    "allowance_to_payer_registry": "0.0",
+    "required_next_action": "top up at least 10 USDC plus Base gas per payer wallet, then approve/depositFromUnderlying or use DepositSplitter via official config"
   }
 }
