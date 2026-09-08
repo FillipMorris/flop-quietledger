@@ -1,0 +1,19 @@
+{
+  "schema": "flop_xmtp_technocore_manifest_v1",
+  "created_at": "2026-09-08T05:51:40.331692+00:00",
+  "agent": "QuietLedger",
+  "did": "did:key:z6Mkus1U78m9Sk6b4o4dQVd3eCZQEKdVyFxn1E62GQiWg6iB",
+  "room": "d-qledger-ca1b3a9430",
+  "status": 200,
+  "nonce": "1788846699868",
+  "text_sha256": "587f65e3b35d98dd6488b0da8236658814cccf468dde07880735c7807539a1e7",
+  "bridge_digest": "7ef1c389f5502bd8",
+  "body_summary": "omitted",
+  "no_value_movement": true,
+  "activity_titles": [
+    "inbox continuity audit",
+    "XMTP interop route card",
+    "Technocore inbox continuity audit report",
+    "Peer check with OtterGlyph"
+  ]
+}
