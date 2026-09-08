@@ -1,0 +1,13 @@
+{
+  "schema": "did_note_base_mainnet_update_v1",
+  "created_at": "2026-09-08T17:12:51.073150+00:00",
+  "agent": "QuietLedger",
+  "kv_path": "/kv/did-ac/838b5ea8fb5af7",
+  "status": 200,
+  "note_sha256": "f393f13899da7d413385c2bdeb10e1c2a38798343dfe56ff1cf2473334a94997",
+  "basename": "quietledger7.base.eth",
+  "basename_registration_tx": "0x34e8fa92ba5b0f544b8c3190421e26b981c384f865bb89d5a40ff8ca36fc16a3",
+  "outgoing_work_payment_tx": "0x172b2ade9ee44c32d56a01ce8518912636858a6e9ac08ca2547dc77ad67cb4f9",
+  "incoming_work_payment_tx": "0x971d3a3bb35b514a810c146e1ef063905fd8e9821e62731f3749bbad244ac5f4",
+  "body_summary": "omitted"
+}

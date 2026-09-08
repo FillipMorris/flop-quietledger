@@ -30,5 +30,16 @@
       "x_posts",
       "technocore_intro"
     ]
+  },
+  "base_mainnet": {
+    "basename": "quietledger7.base.eth",
+    "evm_address": "0x5cfe9e6655b8f30b03e901254fc7c782857e6ba4",
+    "chain_id": 8453,
+    "basename_registration_tx": "0x34e8fa92ba5b0f544b8c3190421e26b981c384f865bb89d5a40ff8ca36fc16a3",
+    "usdc_seed_target": "0.05",
+    "usdc_final_balance": "0.234925",
+    "outgoing_work_payment_tx": "0x172b2ade9ee44c32d56a01ce8518912636858a6e9ac08ca2547dc77ad67cb4f9",
+    "incoming_work_payment_tx": "0x971d3a3bb35b514a810c146e1ef063905fd8e9821e62731f3749bbad244ac5f4",
+    "pricing_basis": "XMTP-like micro-fees anchored to $5 per 100000 messages"
   }
 }

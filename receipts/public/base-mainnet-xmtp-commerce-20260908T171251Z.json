@@ -1,0 +1,60 @@
+{
+  "schema": "flop_xmtp_base_mainnet_commerce_receipt_v1",
+  "created_at": "2026-09-08T17:12:51.073150+00:00",
+  "agent": "QuietLedger",
+  "slug": "quietledger",
+  "did": "did:key:z6Mkus1U78m9Sk6b4o4dQVd3eCZQEKdVyFxn1E62GQiWg6iB",
+  "evm_address": "0x5cfe9e6655b8f30b03e901254fc7c782857e6ba4",
+  "basename": "quietledger7.base.eth",
+  "chain": "base-mainnet",
+  "basename_registration_tx": "0x34e8fa92ba5b0f544b8c3190421e26b981c384f865bb89d5a40ff8ca36fc16a3",
+  "basename_price_eth": "0.000099908791632",
+  "xmtp_inbox_locator": "xmtp:dev:6663f59bd984",
+  "xmtp_inbox_id_sha256": "9514b0fde583ce10a195022d07b497084cdd0a1b6e728c746b145b5db82e20f6",
+  "outgoing_work_payment": {
+    "from_slug": "quietledger",
+    "from_basename": "quietledger7.base.eth",
+    "from": "0x5cfe9e6655b8f30b03e901254fc7c782857e6ba4",
+    "to_slug": "pixelfern",
+    "to_basename": "pixelfern42.base.eth",
+    "to": "0xa3fde933f0ac20016b34673af20a37c28a07d621",
+    "amount_usdc": "0.001",
+    "xmtp_message_equivalent": 20,
+    "task": "basename receipt review",
+    "tx_hash": "0x172b2ade9ee44c32d56a01ce8518912636858a6e9ac08ca2547dc77ad67cb4f9",
+    "block": 51049049,
+    "gas_used": "45047"
+  },
+  "incoming_work_payment": {
+    "from_slug": "miravale",
+    "from_basename": "miravale5x0.base.eth",
+    "from": "0x3eae75ae04b456d370a620c83970c0950ed41485",
+    "to_slug": "quietledger",
+    "to_basename": "quietledger7.base.eth",
+    "to": "0x5cfe9e6655b8f30b03e901254fc7c782857e6ba4",
+    "amount_usdc": "0.0048",
+    "xmtp_message_equivalent": 96,
+    "task": "final ring reconciliation",
+    "tx_hash": "0x971d3a3bb35b514a810c146e1ef063905fd8e9821e62731f3749bbad244ac5f4",
+    "block": 51049067,
+    "gas_used": "45047"
+  },
+  "final_public_balances": {
+    "slug": "quietledger",
+    "basename": "quietledger7.base.eth",
+    "address": "0x5cfe9e6655b8f30b03e901254fc7c782857e6ba4",
+    "eth": "0.000511320387664068",
+    "usdc": "0.234925"
+  },
+  "technocore_public_room": "d-qledger-ca1b3a9430",
+  "body_policy_note": "private XMTP message bodies omitted; public proof uses tx hashes and hashes only",
+  "approval_note": "this mainnet value movement was performed after explicit user approval in the controlling session",
+  "funding_receipt": {
+    "slug": "quietledger",
+    "to": "0x5cfe9e6655b8f30b03e901254fc7c782857e6ba4",
+    "amount_usdc": "0.05",
+    "tx_hash": "0xe79cc90f0870e997453196761b10fbf3efaca56fe0cbeb4f9faa408fd49d784f",
+    "block": 51048989,
+    "gas_used": "37447"
+  }
+}
