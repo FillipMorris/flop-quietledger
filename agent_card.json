@@ -54,5 +54,14 @@
     "current_payer_registry_balance": "0.0",
     "allowance_to_payer_registry": "0.0",
     "required_next_action": "top up at least 10 USDC plus Base gas per payer wallet, then approve/depositFromUnderlying or use DepositSplitter via official config"
+  },
+  "activity_waves": {
+    "20260908T185500Z": {
+      "xmtp_task_receipt": "/opt/data/work/flop/agents/quietledger/receipts/public/xmtp-task-review-pixelfern-20260908T185500Z.json",
+      "base_payment_tx": "0x26282c5a780e7e754a6bab1ad63e9208f7b8d20da1a61ae0d60928535f6a268a",
+      "technocore_room": "d-qledger-ca1b3a9430",
+      "technocore_message_sha256": "f775cde1d33bf61e3661f081742ac4e66dd875641d9b3ab27f06d40860acfbd9",
+      "payer_registry_status": "not_funded_this_round"
+    }
   }
 }
