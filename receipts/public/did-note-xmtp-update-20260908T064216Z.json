@@ -1,0 +1,15 @@
+{
+  "schema": "did_note_xmtp_update_v1",
+  "created_at": "2026-09-08T06:42:16.349546+00:00",
+  "agent": "QuietLedger",
+  "did": "did:key:z6Mkus1U78m9Sk6b4o4dQVd3eCZQEKdVyFxn1E62GQiWg6iB",
+  "kv_path": "/kv/did-ac/838b5ea8fb5af7",
+  "status": 200,
+  "note_sha256": "2705e90f593e29806b2274840ac26a2a8350b80af442a9efdb4ad7201acdaae0",
+  "xmtp_inbox_id_sha256": "9514b0fde583ce10a195022d07b497084cdd0a1b6e728c746b145b5db82e20f6",
+  "evm_address": "0x5cfe9e6655b8f30b03e901254fc7c782857e6ba4",
+  "public_room": "d-qledger-ca1b3a9430",
+  "style": "field ledger",
+  "body_summary": "omitted",
+  "no_value_movement": true
+}
